@@ -1,5 +1,5 @@
 class Carrier < ActiveRecord::Base
-  attr_accessible :active, :name, :type
+  attr_accessible :active, :name, :carrierType
 
   has_many :positions
 
