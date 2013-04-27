@@ -6,7 +6,7 @@ class CarriersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @carriers.as_json(:include=>{:positions => {:methods=>:timestamp}}) }
+      format.json { render json: @carriers.as_json(:methods=>:lastPosition,:include=>{:positions => {:methods=>:timestamp}}) }
     end
   end
 
